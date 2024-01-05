@@ -22,7 +22,7 @@ pipeline:
                   name: echo
                   spec:
                     shell: Sh
-                    command: echo hello world
+                    command: echo hello world from pull request.
                   timeout: ""
                   type: Run
           platform:
