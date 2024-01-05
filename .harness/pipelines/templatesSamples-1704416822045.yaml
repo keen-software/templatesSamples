@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_keen_software_templatesSamples_1704416826816
+  name: Build templatesSamples
+  orgIdentifier: default
+  projectIdentifier: playground
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.github
+        repoName: keen-software/templatesSamples
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
